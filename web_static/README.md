@@ -1,1 +1,1 @@
-Web static project
+This directory implements webpage design.
