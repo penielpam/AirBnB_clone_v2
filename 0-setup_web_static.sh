@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Configures a web server for deploying web_static.
 
 # Update and install Nginx
@@ -6,16 +7,29 @@ apt-get update
 apt-get install -y nginx
 
 # Create necessary directories and index file
+=======
+# Sets up a web server for deployment of web_static.
+
+apt-get update
+apt-get install -y nginx
+
+>>>>>>> 73551a09623cbc28dea49449990f143215404231
 mkdir -p /data/web_static/releases/test/
 mkdir -p /data/web_static/shared/
 echo "Holberton School" > /data/web_static/releases/test/index.html
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 
+<<<<<<< HEAD
 # Set ownership and group for directories
 chown -R ubuntu /data/
 chgrp -R ubuntu /data/
 
 # Configure Nginx server block
+=======
+chown -R ubuntu /data/
+chgrp -R ubuntu /data/
+
+>>>>>>> 73551a09623cbc28dea49449990f143215404231
 printf %s "server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -39,5 +53,8 @@ printf %s "server {
     }
 }" > /etc/nginx/sites-available/default
 
+<<<<<<< HEAD
 # Restart Nginx service
+=======
+>>>>>>> 73551a09623cbc28dea49449990f143215404231
 service nginx restart
